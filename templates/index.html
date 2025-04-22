@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+</head>   
+<body> 
+    <header>
+        <h1>Welcome to Our Platform</h1>
+        <div class="login-buttons">
+            <button id="student-login-btn" onclick="window.location.href='{{ url_for('student_login') }}'">Student Login</button>
+            <button id="recruiter-login-btn" onclick="window.location.href='{{ url_for('recruiter_login') }}'">Recruiter Login</button>
+            
+            
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Career with Exskilence Logo">
+            <div class="negative">    
+                <h3>Your Future Awaits</h3> 
+                <p>Join our platform to kickstart your career.</p>
+            </div>
+        </section>
+        <section class="trusted-companies">
+            <h3>Trusted By</h3>
+            <div class="companies">
+                <span>Google</span>
+                <span>Microsoft</span>
+                <span>Amazon</span>
+                <span>Apple</span>
+                <span>Facebook</span>
+                <span>Tesla</span>
+                <span>Netflix</span>
+                <span>Adobe</span>
+                <span>Salesforce</span>
+                <span>Intel</span>
+                <span>IBM</span>
+            </div>
+        </section>
+        <section class="stats">
+            <div class="stats-parent-container">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-description">Jobs Posted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5K+</div>
+                        <div class="stat-description">Active Recruiters</div>
+                    </div>
+                </div>
+                <div class="start-career">
+                    <h4>Ready to Start Your Career?</h4>
+                    <button id="student-login-btn" onclick="window.location.href='{{ url_for('student_login') }}'">Student Login</button>
+                                    </div>
+            </div>
+        </section>
+    </main>
+</body> 
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</html>  
