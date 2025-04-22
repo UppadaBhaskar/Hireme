@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 from database import init_db
+import os
 from pythonfiles.report import generate_report
 from pythonfiles.Student_reset_pass import update_student_password
 from pythonfiles.rec_forgotpassword import update_password
@@ -302,4 +303,5 @@ def generate_report():
  
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  
+    app.run(host="0.0.0.0", port=port,debug=True)
