@@ -257,7 +257,7 @@ def reset_password():
 
 @app.route('/reset-password-page')
 def reset_password_page():
-    return render_template('reset_password.html')
+    return render_template('student_reset_password.html')
 # ++++++++++++++++++++++++++++++++++++++ END OF STUDENT FORGOT PASSWORD +++++++++++++++++++++++++++++
 
 # ++++++++++++++++++++++++++++++++++++++ START OF REPORT PAGE +++++++++++++++++++++++++++++
